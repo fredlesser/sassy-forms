@@ -1,0 +1,100 @@
+/***Global***/
+form.myForm {
+  padding: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #333333;
+  color: black; }
+
+form.myForm label,
+form.myForm input {
+  display: block; }
+
+form.myForm,
+form.myForm input,
+form.myForm button,
+form.myForm textarea {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
+
+form.myForm label {
+  margin: 15px 0 5px 0;
+  font-size: 16px;
+  font-size: 1rem;
+  color: black;
+  text-shadow: 1px 1px 1px #595959; }
+
+form.myForm input[type="text"],
+form.myForm textarea {
+  padding: 10px 4px;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  border: 1px solid #212121;
+  background: #404040;
+  color: black;
+  -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+  width: 100%; }
+
+form.myForm textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 5px; }
+
+form.myForm input[type="text"]:focus,
+form.myForm textarea:focus {
+  background: #737373;
+  color: black; }
+
+form.myForm button[type="submit"] {
+  border: 1px solid #d23c0b;
+  background: #f2470f;
+  color: white;
+  padding: 7px;
+  margin: 20px 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #ab3109; }
+
+form.myForm button[type="submit"]:hover {
+  background: #d23c0b; }
+
+/***Additional styles***/
+/***rounded***/
+form.myForm.rounded label {
+  margin: 18px 0 4px 7px; }
+
+form.myForm.rounded input,
+form.myForm.rounded button {
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 10px; }
+
+form.myForm.rounded button {
+  border: none; }
+
+form.myForm.rounded button {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  padding: 8px 10px; }
+
+/***Inverse***/
+form.myForm.inverse label,
+form.myForm.inverse input,
+form.myForm.inverse button,
+form.myForm.inverse textarea {
+  color: white; }
+
+form.myForm.inverse label {
+  text-shadow: 1px 1px 1px #0d0d0d; }
+
+form.myForm.inverse input,
+form.myForm.inverse textarea {
+  background: #212121; }
+
+form.myForm.inverse input[type="text"]:focus,
+form.myForm.inverse textarea:focus {
+  background: black;
+  color: white; }

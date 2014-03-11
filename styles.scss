@@ -1,0 +1,202 @@
+//Add you new colors here as you need them
+
+//Base colors
+$darkGrey: #333;
+$skyBlue: #E4EAF2;
+$lightGrey: #ececec;
+
+//Button colors
+$buttonBlue: #5086FA;
+$buttonOrange: #F2470F;
+$buttonGreen: #27D63E;
+
+
+//Change these values to change you form color palette and button style
+
+$base: $darkGrey;
+$buttonBase: $buttonOrange;
+
+//Mixins
+
+//Font size
+@mixin fontsize($sizeValue: 16) {
+font-size: ($sizeValue) + px;
+font-size: ($sizeValue / 16) + rem;
+}
+
+// Base Font
+$base-font-family: Helvetica, Arial, sans-serif;
+
+//Global mixins
+
+@mixin insetBoxShadow($horizontal: 0px, $vertical: 0px, $blur: 3px, $color: rgba(0, 0, 0, 0.1)) {
+  -moz-box-shadow: inset $horizontal $vertical $blur $color;
+  -webkit-box-shadow: inset $horizontal $vertical $blur $color;
+  box-shadow: inset $horizontal $vertical $blur $color;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin textshadow($insetColor) {
+  text-shadow: 1px 1px 1px $insetColor;
+}
+
+
+//Basic Form variables
+
+$formBorder: darken( $base, 7% );
+
+$formBg: lighten( $base, 5% );
+
+$formBgHover: lighten( $base, 25% );
+
+$formColor: darken( $base, 60% );
+
+$formInset: lighten( $base, 15% );
+
+
+//Inverse variables
+
+$InverseBorderColor: darken( $base, 7% );
+
+$inverseBg: darken( $base, 7% );
+
+$inverseBgHover: darken( $base, 30% );
+
+$inverseColor: lighten( $base, 90% );
+
+$inverseInset: darken( $base, 15% );
+
+
+//Button variables
+
+$buttonBg: $buttonBase;
+
+$buttonBorder: darken( $buttonBase, 7% );
+
+$buttonColor: lighten( $buttonBase, 60% );
+
+$buttonInset: darken( $buttonBase, 15% );
+
+
+//Basic form mixin
+
+@mixin basic($background, $border, $color) {
+  border: 1px solid $border;
+  background: $background;
+  color: $color;
+}
+
+/***Global***/
+
+
+form.myForm {
+  padding: 30px;
+  font-family: $base-font-family;
+  background: $base;
+  color: $formColor;
+}
+
+form.myForm label,
+form.myForm input {
+  display: block;
+}
+
+form.myForm,
+form.myForm input,
+form.myForm button,
+form.myForm textarea {
+  @include border-radius(2px);
+}
+
+form.myForm label {
+  margin: 15px 0 5px 0;
+  @include fontsize(16);
+  color: $formColor;
+  @include textshadow($formInset);
+}
+
+form.myForm input[type="text"],
+form.myForm textarea {
+  padding: 10px 4px;
+  @include fontsize(17);
+  @include basic($formBg, $formBorder, $formColor);
+  @include insetBoxShadow();
+  width: 100%;
+}
+
+form.myForm textarea {
+  font-family: $base-font-family;
+  padding: 5px;
+}
+
+form.myForm input[type="text"]:focus,
+form.myForm textarea:focus {
+  background: $formBgHover;
+  color: $formColor;
+}
+
+form.myForm button[type="submit"] {
+  @include basic($buttonBg, $buttonBorder, $buttonColor); 
+  padding: 7px;
+  margin: 20px 0;
+  @include fontsize(18);
+  cursor: pointer;
+  @include textshadow($buttonInset);
+}
+
+form.myForm button[type="submit"]:hover {
+  background: $buttonBorder;
+  }
+
+
+/***Additional styles***/
+
+/***rounded***/
+
+form.myForm.rounded label {
+  margin: 18px 0 4px 7px;
+}
+
+form.myForm.rounded input,
+form.myForm.rounded button {
+  @include border-radius(30px);
+  padding: 10px;
+}
+
+form.myForm.rounded button {
+  border: none;
+}
+
+form.myForm.rounded button {
+  @include fontsize(17);
+  padding: 8px 10px;
+}
+
+/***Inverse***/
+    
+form.myForm.inverse label,
+form.myForm.inverse input,
+form.myForm.inverse button,
+form.myForm.inverse textarea {
+  color: $inverseColor;
+}
+
+form.myForm.inverse label {
+  @include textshadow($inverseInset);
+}
+
+form.myForm.inverse input,
+form.myForm.inverse textarea {
+  background: $inverseBg;
+}
+
+form.myForm.inverse input[type="text"]:focus,
+form.myForm.inverse textarea:focus {
+  background: $inverseBgHover;
+  color: $inverseColor;
+}
