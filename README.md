@@ -14,6 +14,6 @@ Firstly, make sure you have SASS installed. Then:
 
 <code>sass --watch styles.scss:styles.css</code>
 
-If you're using a dark $base color, you may want to add the class <code>'inverse'</code> to your form. For rounded input fields and buttons add the class <code>'rounded'</code> to the form element.
+If you're using a dark $base color, you may want to add <code>class="inverse"</code> to your form. For rounded input fields and buttons add <code>class="rounded"</code> to the form element.
 
 Demo: <a href="#" target="_blank">Here</a>
