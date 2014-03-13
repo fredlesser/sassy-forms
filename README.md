@@ -1,9 +1,9 @@
-sassy-forms
+Sassy forms
 ===========
 
 A SASS based form style generator
 
-Sassy form is an SCSS file that allows you to create a variety of form styles by simply adding new base colors and replacing the values of the 2 variables:
+Sassy forms is an SCSS file that allows you to create a variety of form styles by simply adding new base colors and replacing the values of the 2 variables:
 
 <pre>$base</pre>
 <pre>$buttonBase</pre>
