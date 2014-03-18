@@ -10,7 +10,7 @@ Sassy forms is an SCSS file that allows you to create a variety of form styles b
 
 Firstly, make sure you have SASS installed. Then:
 
-<code>cd your-foder</code>
+<code>cd your-folder</code>
 
 <code>sass --watch styles.scss:styles.css</code>
 
